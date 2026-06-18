@@ -25,3 +25,6 @@ export const booksResponse = {
         }
     ]
 }
+export const emptyBooksResponse={
+    books:[]
+};
