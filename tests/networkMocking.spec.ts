@@ -1,6 +1,5 @@
 import {test, expect} from '@playwright/test';
-import {booksResponse} from '../test-data/books';
-import {emptyBooksResponse} from '../test-data/emptyBooks';
+import {booksResponse,emptyBooksResponse} from '../test-data/books';
 test('TC_005 - Mock Books API with custom books and verify UI' , async({page}) => {
     await page.route('**/BookStore/v1/Books', async route =>{
         await route.fulfill({ status : 200, contentType:'application/json',body:JSON.stringify(booksResponse)});
